@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         String color = "Rojo";
-        int cantidad = 100;
+        int cantidad = 1;
         String marca = "Audi";
         String modelo = "Q3";
         String combustible = "Nafta";
@@ -26,8 +26,13 @@ public class Main {
 
             switch (opcion){
                 case 1:
-                    String acelero = francoAuto.acelerar();
-                    System.out.println(acelero);
+                    boolean acelero = francoAuto.acelerar();
+                    if(acelero){
+                        System.out.println("FIUM");
+                    }else{
+                        estaEncendido = acelero;
+                    }
+
                     break;
                 case 2:
                     String freno = francoAuto.frenar();

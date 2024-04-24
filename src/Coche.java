@@ -71,14 +71,14 @@ public class Coche {
         System.out.println("BEEEEEEEEEEEEEEEEEEEEEEEEE(Sonidito)");
     }
 
-    public String acelerar(){
+    public Boolean acelerar(){
         if(cantidadDeCombustible > 0){
-            System.out.println("FIUMM");
             this.cantidadDeCombustible -= 1;
-            return "Auto acelerando";
+            return true;
         }else{
-            System.out.println("BUM");
-            return "Auto frenado";
+            System.out.println("BUM. Nos quedamos sin combustible!");
+            this.encendido = false;
+            return false;
         }
     }
 
